@@ -1,10 +1,13 @@
 import NavList from "../../components/NavList/NavList";
-// import "../Header.css";
+import NavLogo from "../../components/NavLogo";
+
 const Header = () => {
   return (
-    <div>
+    <header className="header">
+      <NavLogo />
+      <div className="nav-line"></div>
       <NavList />
-    </div>
+    </header>
   );
 };
 
