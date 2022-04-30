@@ -1,50 +1,5 @@
-:root {
-  --text-color-primary: #232323;
-  --text-color-secondary: #333333;
-  --text-color-heading: #ed1b29;
-  --text-color-desc: #9e9e9e;
-}
-
-.nav-logo {
-  font-size: 1.4rem;
-  margin: 0 auto;
-  padding: 2.5rem 0;
-}
-
-.nav-line {
-  height: 1px;
-  background-color: black;
-  opacity: 0.1;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  list-style-type: none;
-  font-size: 1.6rem;
-  color: var(--text-color-primary);
-  font-weight: 700;
-  margin: 0 auto;
-  padding: 2.5rem 0;
-}
-
-.nav-logo,
-.nav-list:hover {
-  cursor: pointer;
-}
-
-.nav-item--active {
-  position: relative;
-}
-
-.nav-item--active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  border-bottom: 0.2rem solid var(--text-color-heading);
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
+@media (max-width: 740px) {
+  body {
+    overflow: hidden;
+  }
 }

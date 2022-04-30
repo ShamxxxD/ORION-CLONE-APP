@@ -7,9 +7,8 @@
 }
 
 html {
-  box-sizing: border-box;
-  /* 10px / 16px */
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,24 +24,21 @@ a {
   color: inherit;
 }
 
+li {
+  list-style-type: none;
+}
+
 .container {
   max-width: 108rem;
-}
-
-section {
-  margin: 0 auto 8rem;
-}
-
-.--heading {
-  padding: 8.4rem 0 4.6rem;
+  margin: 0 auto;
 }
 
 h2 {
   font-size: 3rem;
 }
 
-button {
-  padding: 1.3rem 4rem;
-  font-size: 1.8rem;
-  border-radius: 0.5rem;
+@media (max-width: 40rem) {
+  h2 {
+    font-size: 1.3rem;
+  }
 }

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
+
+.products {
+  background-color: #f6f6f6;
+}
+
+.products__wrapper {
+  margin: 0 auto;
+}
+
+.products__heading {
+  text-align: center;
+  padding: 8rem 0 4.5rem;
+}
+
+.products__sub__title {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+  font-family: "Updock", cursive;
+}
+
+.products__list {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.products__item {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5.85rem;
+}
+
+.products__item__img {
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
+.products__item:hover {
+  color: rgb(240, 10, 10);
+  transform: translateY(-5%) scale(1.2);
+  transition: all 0.3s;
+}
+
+.products__img {
+  margin: 4rem 2rem;
+  width: 20rem;
+  height: 15rem;
+}
+
+.products__name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.products__section__btn {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  position: relative !important;
+  left: 50% !important;
+  color: rgb(240, 10, 10) !important;
+  transform: translateX(-50%) !important;
+  margin-bottom: 8rem !important;
+}
+
+@media (max-width: 40rem) {
+  .products__wrapper {
+    margin: 0 2rem;
+  }
+
+  .products__heading {
+    padding: 2.4rem 0 0rem;
+  }
+
+  .products__sub__title {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+  }
+
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products__item {
+    width: 100%;
+  }
+
+  .products__img {
+    width: 6.4rem;
+    height: 4.8rem;
+    margin: 2.2rem 0.6rem;
+  }
+  .products__name {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .products__section__btn {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    border-radius: 1rem !important;
+  }
+}

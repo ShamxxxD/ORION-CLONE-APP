@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
+
+.videos__section {
+  background-image: url(../../../../assets/img/galaxy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.videos__section__heading {
+  color: #fff;
+  text-align: center;
+  padding: 9rem 0 4.5rem;
+}
+
+.videos__section__sub__title {
+  font-size: 3.2rem;
+  font-family: "Updock", cursive;
+}
+
+.videos__section__videos__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.videos__section__videos__item1,
+.videos__section__videos__item2,
+.videos__section__videos__item3 {
+  width: 40rem;
+  height: 24rem;
+  position: relative;
+}
+
+.videos__img {
+  width: 100%;
+}
+
+.youtube__icon1,
+.youtube__icon2,
+.youtube__icon3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.videos__section__btn {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  position: relative !important;
+  left: 50% !important;
+  background-color: rgb(240, 10, 10) !important;
+  transform: translateX(-50%) !important;
+  margin-top: 8rem !important;
+}
+
+@media (max-width: 40rem) {
+  .videos__section__videos__list:nth-child(1) {
+    display: none;
+  }
+  .videos__section__videos__list:nth-child(2) {
+    display: none;
+  }
+  .videos__section__videos__list:nth-child(3) {
+    display: none;
+  }
+}
