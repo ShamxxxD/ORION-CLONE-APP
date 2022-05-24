@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "@splidejs/react-splide/css";
-import "./index.css";
+import "./styles/app.css";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

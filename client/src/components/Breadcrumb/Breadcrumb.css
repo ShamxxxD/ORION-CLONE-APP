@@ -1,0 +1,11 @@
+.breadcrumb {
+  background-color: whitesmoke;
+  transform: translateY(-0.3rem);
+}
+
+.breadcrumb--item {
+  display: block;
+  color: #232323 !important;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}

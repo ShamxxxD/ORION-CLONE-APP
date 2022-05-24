@@ -1,0 +1,88 @@
+/* REUSABLE */
+
+.contact__title {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+/* *************** */
+
+.contact__banner {
+  position: relative;
+}
+
+.contact__banner--img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.contact__banner--title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.3rem solid #fff;
+  padding: 1.5rem 4rem;
+}
+
+.contact__nav__wrapper {
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* SUB NAV */
+
+/* FACTORYCONTACT  */
+
+div .main__content {
+  margin-bottom: 10rem;
+}
+
+.contact__factory {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.contact__factory .factory__image {
+  width: 100%;
+}
+
+.contact__factory .factory__description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.contact__detail {
+  display: flex;
+  align-items: center;
+  margin: 1.6rem 0;
+}
+
+.contact__detail i {
+  margin-right: 1rem;
+  color: #ff0000;
+  padding: 0.7rem;
+  background-color: #fde8ea;
+}
+
+.contact__detail div > p:first-child {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.contact__detail div p {
+  font-size: 1.3rem;
+}
+
+.contact__line {
+  margin: 4rem 0;
+  height: 1px;
+  background-color: #ccc;
+}

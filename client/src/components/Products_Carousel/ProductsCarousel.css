@@ -1,0 +1,37 @@
+.products__carousel {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__carousel--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__carousel--item div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.products__carousel--item div:hover {
+  cursor: pointer;
+}
+
+.products__carousel--item div img {
+  width: 100%;
+}
+
+.products__carousel--item p {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1rem 0;
+}

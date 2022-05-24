@@ -1,0 +1,43 @@
+/* PRODUCTS LIST */
+
+.products__carousel__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 10rem;
+}
+
+.products__carousel__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #f6f6f6;
+  height: 31rem;
+  overflow: hidden;
+}
+
+.products__carousel__item--img {
+  width: 100%;
+  padding: 3rem 3rem 0;
+}
+
+.products__carousel__item div {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.products__carousel__item--name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.products__carousel__item--desc {
+  font-size: 1.3rem;
+  opacity: 0.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 1rem 0;
+}

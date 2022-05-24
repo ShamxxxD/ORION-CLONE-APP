@@ -1,0 +1,90 @@
+.about__title {
+  font-size: 3rem;
+  margin: 5rem 0;
+  color: #ed1b29;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about__content--wrapper {
+  margin-bottom: 10rem;
+}
+
+.about__content--wrapper div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about__content {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center;
+  padding: 0 2rem;
+  background-color: #f6f6f6;
+}
+
+.about__content--img {
+  width: 100%;
+}
+
+.about__content--heading {
+  font-size: 2.4rem;
+  color: #ed1b29;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.about__content p {
+  font-size: 1.3rem;
+}
+
+/* *** */
+
+.about__main__content {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.flex-history {
+  display: flex;
+}
+
+.flex-history img {
+  width: 85%;
+  align-self: center;
+}
+
+.flex-history div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  text-align: start;
+}
+
+.timeline-item {
+  margin-bottom: 4rem;
+  margin-left: 5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0.5rem;
+}
+.timeline-item h2 {
+  position: relative;
+  font-weight: 600;
+}
+
+.timeline-item h2::before {
+  content: url(../../assets/img/After.png);
+  display: block;
+  position: absolute;
+  transform: translateX(-150%);
+}
+
+.timeline-item p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}

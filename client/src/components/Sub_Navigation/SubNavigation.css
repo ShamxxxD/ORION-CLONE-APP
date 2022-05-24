@@ -1,0 +1,21 @@
+.sub__navigation {
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.sub__navigation div {
+  border: 1px solid #ccc;
+}
+
+.sub__navigation--item {
+  display: block !important;
+  color: #232323 !important;
+  padding: 1rem 0 !important;
+}
+
+.sub__navigation--item:hover {
+  background-color: #ccc;
+}
