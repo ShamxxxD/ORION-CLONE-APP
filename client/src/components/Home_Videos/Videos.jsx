@@ -5,6 +5,11 @@ import roprop from "../../assets/img/roprop.jpg";
 import youtubeBtn from "../../assets/img/icon-youtube.svg";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
+const data = {
+  images: [chocopie, Cbon, roprop],
+};
 
 const Videos = () => {
   return (
@@ -16,22 +21,32 @@ const Videos = () => {
         </p>
       </div>
 
-      <div className="videos__section__videos__list">
-        <div className="videos__section__videos__item1">
-          <img className="videos__img" src={chocopie} alt="" />
-          <img className="youtube__icon1" src={youtubeBtn} alt="" />
-        </div>
-
-        <div className="videos__section__videos__item2">
-          <img className="videos__img" src={Cbon} alt="" />
-          <img className="youtube__icon2" src={youtubeBtn} alt="" />
-        </div>
-
-        <div className="videos__section__videos__item3">
-          <img className="videos__img" src={roprop} alt="" />
-          <img className="youtube__icon3" src={youtubeBtn} alt="" />
-        </div>
-      </div>
+      <Splide
+        className="videos__section__videos__list"
+        options={{
+          rewind: true,
+          type: "loop",
+          rewindByDrag: true,
+          autoplay: false,
+          interval: "3000",
+          pauseOnHover: false,
+          speed: "1500",
+          perPage: "1",
+          arrows: true,
+          pagination: false,
+        }}
+      >
+        {data.images.map((image) => {
+          return (
+            <SplideSlide>
+              <div className="videos__section__videos__item">
+                <img className="videos__img" src={image} alt="" />
+                <img className="youtube__icon" src={youtubeBtn} alt="" />
+              </div>
+            </SplideSlide>
+          );
+        })}
+      </Splide>
 
       <Button
         className="videos__section__btn"

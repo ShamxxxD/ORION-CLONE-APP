@@ -11,7 +11,6 @@ const NavList = ({ onClick }) => {
   return (
     // có thể tạo folder Navitem là mảng các object có path. tên... rồi map qua
     <>
-      (
       <nav className="nav__list  container">
         {/*=======HOME ======= */}
         <NavLink
@@ -91,7 +90,6 @@ const NavList = ({ onClick }) => {
           </div>
         </NavLink>
       </nav>
-      )
     </>
   );
 };

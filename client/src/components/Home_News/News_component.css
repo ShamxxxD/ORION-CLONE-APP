@@ -11,7 +11,7 @@
 
 .news__img {
   width: 100%;
-  height: 13rem;
+  height: 16rem;
 }
 
 .news__items {
@@ -20,9 +20,9 @@
 
 .news__item {
   display: block;
-  margin: 2rem;
+  margin: 0 auto;
   width: 24rem;
-  height: 26rem;
+  height: 28rem;
   background-color: #fff;
   overflow: hidden;
   border: 1px solid #ccc;
@@ -37,8 +37,9 @@
 }
 
 .news__item__timepublish {
-  padding-left: 1rem;
-  font-size: 1.2rem;
+  margin: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
   opacity: 0.5;
 }
 
@@ -63,6 +64,7 @@
   }
   .news__section__sub__title {
     font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 
   .news__section__btn {
@@ -74,20 +76,25 @@
 
   .news__img {
     width: 100%;
-    height: auto;
+    height: 14rem;
   }
 
   .news__items {
-    display: flex !important;
-    justify-content: space-between !important;
     width: 100%;
-    margin: 0 2rem;
     padding: 0;
   }
 
   .news__item {
-    display: block;
-    width: 16rem;
-    height: 16rem;
+    width: 20rem;
+    height: 24rem;
+  }
+
+  .news__item__title {
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 1rem 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 }

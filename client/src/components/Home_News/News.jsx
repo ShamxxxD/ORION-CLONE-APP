@@ -20,11 +20,51 @@ const News_component = () => {
     window.addEventListener("resize", setPageNumber);
   });
 
+  const newsData = [
+    {
+      images: news_1,
+      title: "Nhìn lại hành trình dự án 'Khoai tây quê hương' tại Việt Nam",
+      publishAt: "05, Thg1, 2022",
+    },
+    {
+      images: news_2,
+      title:
+        "Orion vẽ thông điệp “khỏe” lên bánh Choco.Pie động viên đội ngũ y bác sỹ",
+      publishAt: "05, Thg1, 2022",
+    },
+    {
+      images: news_3,
+      title:
+        "Orion gói ghém hương vị truyền thống của Hà Thành trong Custas Kem Cốm Hà Nội",
+
+      publishAt: "28, Thg3, 2022",
+    },
+    {
+      images: news_4,
+      title:
+        "Bánh gạo nướng An từ nhà Orion - sự lựa chọn dinh dưỡng của mọi gia đình",
+
+      publishAt: "07, Thg4, 2022",
+    },
+    {
+      images: news_5,
+      title: "ORION - CÔNG TY SẢN XUẤT BÁNH KẸO HÀNG ĐẦU VIỆT NAM",
+
+      publishAt: "25, Thg2, 2022",
+    },
+    {
+      images: news_6,
+      title:
+        "Kẹo dẻo ‘boom’ chiết xuất từ nước trái cây bùng nổ trên thị trường",
+
+      publishAt: "05, Thg1, 2022",
+    },
+  ];
+
   return (
     <section
       style={{
         backgroundImage: `url(${newsbackground})`,
-        backgroundColor: "red",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -43,7 +83,7 @@ const News_component = () => {
           rewind: true,
           type: "loop",
           rewindByDrag: true,
-          autoplay: false,
+          autoplay: true,
           interval: "3000",
           pauseOnHover: false,
           speed: "1500",
@@ -54,81 +94,19 @@ const News_component = () => {
         }}
         className="news__items  container"
       >
-        <SplideSlide>
-          <div className="news__item ">
-            <Link to="/tin-tuc/thong-tin-san-pham">
-              <img className="news__img" src={news_1} alt="" />
-              <h4 className="news__item__title">
-                Nhìn lại hành trình dự án 'Khoai tây quê hương' tại Việt Nam
-              </h4>
-              <p className="news__item__timepublish">05, Thg1, 2022</p>
-            </Link>
-          </div>
-        </SplideSlide>
-
-        <SplideSlide>
-          <div className="news__item">
-            <Link to="/tin-tuc/thong-tin-san-pham">
-              <img className="news__img" src={news_2} alt="" />
-              <h4 className="news__item__title">
-                Orion vẽ thông điệp “khỏe” lên bánh Choco.Pie động viên đội ngũ
-                y bác sỹ
-              </h4>
-              <p className="news__item__timepublish">05, Thg1, 2022</p>
-            </Link>
-          </div>
-        </SplideSlide>
-
-        <SplideSlide>
-          <div className="news__item">
-            <Link to="/tin-tuc/thong-tin-san-pham">
-              <img className="news__img" src={news_3} alt="" />
-              <h4 className="news__item__title">
-                Orion gói ghém hương vị truyền thống của Hà Thành trong Custas
-                Kem Cốm Hà Nội
-              </h4>
-              <p className="news__item__timepublish">28, Thg3, 2022</p>
-            </Link>
-          </div>
-        </SplideSlide>
-
-        <SplideSlide>
-          <div className="news__item">
-            <Link to="/tin-tuc/thong-tin-san-pham">
-              <img className="news__img" src={news_4} alt="" />
-              <h4 className="news__item__title">
-                Bánh gạo nướng An từ nhà Orion - sự lựa chọn dinh dưỡng của mọi
-                gia đình
-              </h4>
-              <p className="news__item__timepublish">07, Thg4, 2022</p>
-            </Link>
-          </div>
-        </SplideSlide>
-
-        <SplideSlide>
-          <div className="news__item">
-            <Link to="/tin-tuc/thong-tin-san-pham">
-              <img className="news__img" src={news_5} alt="" />
-              <h4 className="news__item__title">
-                ORION - CÔNG TY SẢN XUẤT BÁNH KẸO HÀNG ĐẦU VIỆT NAM
-              </h4>
-              <p className="news__item__timepublish">25, Thg2, 2022</p>
-            </Link>
-          </div>
-        </SplideSlide>
-
-        <SplideSlide>
-          <div className="news__item">
-            <Link to="/tin-tuc/thong-tin-san-pham">
-              <img className="news__img" src={news_6} alt="" />
-              <h4 className="news__item__title">
-                Kẹo dẻo ‘boom’ chiết xuất từ nước trái cây bùng nổ trên thị
-                trường
-              </h4>
-              <p className="news__item__timepublish">05, Thg1, 2022</p>
-            </Link>
-          </div>
-        </SplideSlide>
+        {newsData.map((item) => {
+          return (
+            <SplideSlide>
+              <Link to="/tin-tuc/thong-tin-san-pham">
+                <div className="news__item ">
+                  <img className="news__img" src={item.images} alt="" />
+                  <h4 className="news__item__title">{item.title}</h4>
+                  <h4 className="news__item__timepublish">{item.publishAt}</h4>
+                </div>
+              </Link>
+            </SplideSlide>
+          );
+        })}
       </Splide>
 
       <Button

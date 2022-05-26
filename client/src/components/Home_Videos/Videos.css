@@ -20,20 +20,17 @@
 }
 
 .videos__section__videos__list {
-  display: flex;
-  justify-content: space-around;
+  max-width: 70vw;
+  margin: 0 auto;
 }
 
-.videos__section__videos__item1,
-.videos__section__videos__item2,
-.videos__section__videos__item3 {
+.videos__section__videos__item {
   width: 40rem;
   position: relative;
+  margin: 0 auto;
 }
 
-.videos__section__videos__item1:hover,
-.videos__section__videos__item2:hover,
-.videos__section__videos__item3:hover {
+.videos__section__videos__item:hover {
   transition: all 0.3s;
   transform: scale(1.1);
 }
@@ -42,18 +39,14 @@
   width: 100%;
 }
 
-.youtube__icon1,
-.youtube__icon2,
-.youtube__icon3 {
+.youtube__icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.youtube__icon1:hover,
-.youtube__icon2:hover,
-.youtube__icon3:hover {
+.youtube__icon:hover {
   cursor: pointer;
 }
 
@@ -86,13 +79,25 @@
     font-size: 1.8rem;
   }
   .videos__section__videos__list {
-    padding: 0 2rem;
+    max-width: 90vw;
   }
-  .videos__section__videos__item3 {
-    display: none;
+
+  .videos__section__videos__item {
+    width: 16rem;
+    position: relative;
+    margin: 0 auto;
   }
-  .videos__section__videos__item2 {
-    display: none;
+
+  .videos__img {
+    width: 100%;
+  }
+
+  .youtube__icon {
+    width: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .videos__section__btn {

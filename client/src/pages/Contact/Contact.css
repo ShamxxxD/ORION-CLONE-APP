@@ -7,39 +7,13 @@
   margin: 4rem 0;
 }
 
-/* *************** */
-
-.contact__banner {
-  position: relative;
-}
-
-.contact__banner--img {
+.factory__image {
   width: 100%;
-  opacity: 0.8;
 }
-
-.contact__banner--title {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 0.3rem solid #fff;
-  padding: 1.5rem 4rem;
-}
-
-.contact__nav__wrapper {
-  display: flex;
-  font-size: 1.4rem;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* SUB NAV */
 
 /* FACTORYCONTACT  */
 
-div .main__content {
+.main__content {
   margin-bottom: 10rem;
 }
 
@@ -47,10 +21,6 @@ div .main__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.2rem;
-}
-
-.contact__factory .factory__image {
-  width: 100%;
 }
 
 .contact__factory .factory__description {
@@ -85,4 +55,18 @@ div .main__content {
   margin: 4rem 0;
   height: 1px;
   background-color: #ccc;
+}
+
+@media (max-width: 720px) {
+  .contact__factory {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .contact-map {
+    width: 100%;
+    padding: 0 1.6rem;
+    border: none;
+  }
 }

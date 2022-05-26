@@ -35,3 +35,18 @@
   text-align: center;
   margin: 1rem 0;
 }
+
+@media (max-width: 720px) {
+  .products__carousel {
+    display: flex;
+    justify-content: space-between;
+  }
+  .products__carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .products__carousel--item div {
+    width: 6rem;
+    height: 6rem;
+  }
+}

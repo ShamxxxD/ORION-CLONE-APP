@@ -4,18 +4,19 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   padding-bottom: 10rem;
 }
 
 .products__carousel__item {
+  height: 32rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
   background-color: #f6f6f6;
-  height: 31rem;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 
 .products__carousel__item--img {
@@ -40,4 +41,18 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 1rem 0;
+}
+
+@media (max-width: 720px) {
+  .products__carousel__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 10rem;
+  }
+
+  .products__carousel__item {
+    height: 24rem;
+  }
 }

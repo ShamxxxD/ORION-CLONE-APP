@@ -90,6 +90,7 @@ const GeneralContact = () => {
 
           <div>
             <iframe
+              className="contact-map"
               title="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.148127293999!2d106.71637431453799!3d10.799964861712589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529696c5d0e11%3A0xd79e3c3199393010!2zQ8O0bmcgVHkgVE5ISCBUaOG7sWMgUGjhuqltIE9yaW9uIFZpbmE!5e0!3m2!1svi!2s!4v1652980125514!5m2!1svi!2s"
               width="500"

@@ -5,30 +5,68 @@ import { ProductsBreadCrumb } from "../../components/Breadcrumb/Breadcrumb";
 import { ProductsBanner } from "../../components/Banner/Banner";
 import ProductsCarousel from "../../components/Products_Carousel/ProductsCarousel";
 import { Link } from "react-router-dom";
+import { apiProductsUrl } from "../../api/requests";
+import { useSelector, useDispatch } from "react-redux";
+import Pagination from "../../components/Products-Pagination/Pagination";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const apiProducts =
-    "https://627fc008be1ccb0a46645b2d.mockapi.io/api/products";
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage, setProductsPerPage] = useState(12);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    axios
-      .get(apiProducts)
-      .then((res) => {
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        const res = await axios.get(apiProductsUrl);
+        console.log(res.data);
         setProducts(res.data);
-      })
-      .catch((error) => console.log(error));
-  }, [apiProducts]);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProducts();
+  }, [apiProductsUrl]);
+
+  const category = useSelector((state) => state.category.value);
+
+  let filteredProducts = products;
+
+  if (category !== "Toàn bộ") {
+    filteredProducts = products.filter((product) => product.types === category);
+  }
+
+  // Get current Products
+  const indexOfLastProducts = currentPage * productsPerPage;
+  const indexOfFirstProducts = indexOfLastProducts - productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProducts,
+    indexOfLastProducts
+  );
+
+  const handleSetPage = (page) => {
+    console.log("===page", page);
+    setCurrentPage(page);
+  };
 
   return (
     <>
       <ProductsBanner />
       <ProductsBreadCrumb />
-      <ProductsCarousel products={products} />
+      <ProductsCarousel />
       <div className="container">
         <div className="products__carousel__list">
-          {products.map((item) => {
+          {currentProducts.map((item) => {
             return (
-              <Link to="" className="products__carousel__item" key={item.id}>
+              <Link
+                to={item.slug}
+                className="products__carousel__item"
+                key={item.id}
+              >
                 <img
                   className="products__carousel__item--img"
                   src={item.images[0]}
@@ -47,6 +85,12 @@ const Products = () => {
           })}
         </div>
       </div>
+      <Pagination
+        handleSetPage={handleSetPage}
+        currentPage={currentPage}
+        productsPerPage={productsPerPage}
+        totalProducts={filteredProducts.length}
+      />
     </>
   );
 };

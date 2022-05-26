@@ -88,3 +88,10 @@
   font-size: 1.3rem;
   margin: 0.5rem 0;
 }
+
+@media (max-width: 720px) {
+  .about__content--wrapper div {
+    display: flex;
+    flex-direction: column;
+  }
+}

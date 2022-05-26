@@ -10,6 +10,8 @@ import GeneralContact from "./pages/Contact/GeneralContact";
 import FactoryContact from "./pages/Contact/FactoryContact";
 import Footer from "./layout/Home_Footer/Footer";
 import Header from "./layout/Home_Header/Header";
+import ProductsDetail from "./components/ProductsDetail/ProductsDetail";
+import Videos from "./components/Videos/Videos";
 
 function App() {
   return (
@@ -22,9 +24,12 @@ function App() {
         <Route path="/ve-chung-toi/lich-su" element={<History />} />
 
         <Route path="/san-pham" element={<Products />} />
+        <Route path="/san-pham/:slug" element={<ProductsDetail />} />
 
         <Route path="/tin-tuc/thong-tin-san-pham" element={<NewsProduct />} />
         <Route path="/tin-tuc/thong-cao-bao-chi" element={<PressRelease />} />
+
+        <Route path="/videos" element={<Videos />} />
 
         <Route path="/lien-he/lien-he-chung" element={<GeneralContact />} />
         <Route path="/lien-he/lien-he-nha-may" element={<FactoryContact />} />
