@@ -233,6 +233,29 @@ const FactoryBreadCrumb = () => {
   );
 };
 
+const VideosBreadCrumb = () => {
+  return (
+    <div className="breadcrumb">
+      <div className="container">
+        <Breadcrumbs
+          aria-label="breadcrumb"
+          separator={<NavigateNextIcon fontSize="medium" />}
+        >
+          <Link underline="hover" href="/" className="breadcrumb--item">
+            <i>
+              <HomeIcon fontSize="large" />
+            </i>
+          </Link>
+
+          <Link underline="hover" href="/videos" className="breadcrumb--item">
+            Videos
+          </Link>
+        </Breadcrumbs>
+      </div>
+    </div>
+  );
+};
+
 export {
   GeneralBreadCrumb,
   FactoryBreadCrumb,
@@ -241,4 +264,5 @@ export {
   ProductsBreadCrumb,
   NewsProductsBreadCrumb,
   PressReleaseBreadCrumb,
+  VideosBreadCrumb,
 };

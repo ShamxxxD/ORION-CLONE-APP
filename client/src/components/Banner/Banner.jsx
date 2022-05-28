@@ -3,6 +3,7 @@ import aboutBanner from "../../assets/img/Banner/AboutBanner.png";
 import productsBanner from "../../assets/img/Banner/ProductsBanner.png";
 import newsBanner from "../../assets/img/Banner/NewsBanner.png";
 import contactBanner from "../../assets/img/Banner/ContactBanner.png";
+import videosBanner from "../../assets/img/Banner/video-background.png";
 
 const AboutBanner = () => {
   return (
@@ -40,4 +41,13 @@ const ContactBanner = () => {
   );
 };
 
-export { AboutBanner, ProductsBanner, NewsBanner, ContactBanner };
+const VideosBanner = () => {
+  return (
+    <div className="banner">
+      <img src={videosBanner} alt="banner" className="banner--img" />
+      <h2 className="banner--title">VIDEOS</h2>
+    </div>
+  );
+};
+
+export { AboutBanner, ProductsBanner, NewsBanner, ContactBanner, VideosBanner };

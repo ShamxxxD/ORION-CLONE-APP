@@ -1,4 +1,4 @@
-import { apiNewsRelease } from "../../api/requests";
+import { apiNewsReleaseUrl } from "../../api/requests";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ const NewsRelease = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get(apiNewsRelease);
+        const res = await axios.get(apiNewsReleaseUrl);
         console.log(res.data);
         setNewsRelease(res.data);
       } catch (error) {

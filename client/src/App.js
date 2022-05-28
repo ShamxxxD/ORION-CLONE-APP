@@ -11,7 +11,7 @@ import FactoryContact from "./pages/Contact/FactoryContact";
 import Footer from "./layout/Home_Footer/Footer";
 import Header from "./layout/Home_Header/Header";
 import ProductsDetail from "./components/ProductsDetail/ProductsDetail";
-import Videos from "./components/Videos/Videos";
+import Videos from "./pages/Videos/Videos";
 
 function App() {
   return (

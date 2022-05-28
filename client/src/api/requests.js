@@ -3,5 +3,8 @@ const apiProductsUrl =
 
 const apiNewsUrl = "https://627fc008be1ccb0a46645b2d.mockapi.io/api/news";
 
-const apiNewsRelease = "https://627fc008be1ccb0a46645b2d.mockapi.io/api/new2";
-export { apiProductsUrl, apiNewsUrl, apiNewsRelease };
+const apiNewsReleaseUrl =
+  "https://627fc008be1ccb0a46645b2d.mockapi.io/api/new2";
+
+const apiVideosUrl = "https://627fc008be1ccb0a46645b2d.mockapi.io/api/videos";
+export { apiProductsUrl, apiNewsUrl, apiNewsReleaseUrl, apiVideosUrl };

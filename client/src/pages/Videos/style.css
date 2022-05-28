@@ -1,0 +1,23 @@
+.videos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin: 4rem 0 10rem;
+}
+
+.videos-item {
+  width: 48rem;
+  height: 32rem;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 28rem;
+}
+
+.videos-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}

@@ -7,9 +7,23 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-const data = {
-  images: [chocopie, Cbon, roprop],
-};
+const data = [
+  {
+    id: 1,
+    images: chocopie,
+    youtubeKey: "UxTbavUiHz8",
+  },
+  {
+    id: 2,
+    images: Cbon,
+    youtubeKey: "AcGjSRnVbAE",
+  },
+  {
+    id: 3,
+    images: roprop,
+    youtubeKey: "HGkEhRuyVzA",
+  },
+];
 
 const Videos = () => {
   return (
@@ -36,12 +50,14 @@ const Videos = () => {
           pagination: false,
         }}
       >
-        {data.images.map((image) => {
+        {data.map((item) => {
           return (
-            <SplideSlide>
+            <SplideSlide key={item.id}>
               <div className="videos__section__videos__item">
-                <img className="videos__img" src={image} alt="" />
-                <img className="youtube__icon" src={youtubeBtn} alt="" />
+                <Link to="/videos">
+                  <img className="videos__img" src={item.images} alt="" />
+                  <img className="youtube__icon" src={youtubeBtn} alt="" />
+                </Link>
               </div>
             </SplideSlide>
           );
