@@ -4,7 +4,9 @@ import NavList from "./NavList";
 import React, { useEffect, useState } from "react";
 
 const Nav = () => {
-  const [isShowMenu, setIsShowMenu] = useState(true);
+  const [isShowMenu, setIsShowMenu] = useState(() =>
+    window.innerWidth < 720 ? false : true
+  );
 
   useEffect(() => {
     const resizeListener = window.addEventListener("resize", () => {

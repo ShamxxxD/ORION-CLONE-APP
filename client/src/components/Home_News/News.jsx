@@ -17,8 +17,9 @@ const News_component = () => {
     window.innerWidth < 720 ? setPerPage("1") : setPerPage("3");
   };
   useEffect(() => {
-    window.addEventListener("resize", setPageNumber);
-  });
+    const resizeListener = window.addEventListener("resize", setPageNumber);
+    return () => window.removeEventListener("resize", resizeListener);
+  }, []);
 
   const newsData = [
     {
